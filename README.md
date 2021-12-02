@@ -1,7 +1,21 @@
-# Vue 3 + Vite
+# ant-chatroom
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+> 蚂蚁技术体验部作业
+>
+> 聊天室
+>
+> Build by vite and vue2.
+> All of the code is typed on vim!
 
-## Recommended IDE Setup
+## Usage
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+```sh
+npm run dev
+# default account: j10c
+# default password: j10c
+```
+
+## TODO
+
+- 对局域网开放
+- 聊天对象的配置
