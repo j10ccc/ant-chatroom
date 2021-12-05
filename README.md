@@ -29,6 +29,6 @@ node index.js
 ```
 
 ## Two branches
-- master：build by vite in the first weekend, all messages are saved on your browser and you can only enjoy with youself (.
-- koa: build by koa in the second weekend, all message are saved on nodejs server and it allows muilt-users chat at the same time!
+- `master`：build by vite in the first weekend, all messages are saved on your browser and you can only enjoy with youself (.
+- `koa`: build by koa in the second weekend, all message are saved on nodejs server and it allows muilt-users chat at the same time!
 
