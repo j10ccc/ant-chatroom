@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+  <head>
+	<title>test</title>
+	<meta charset="utf-8">
+	<meta name="author" content="j10c">
+	<script src="https://cdn.bootcdn.net/ajax/libs/socket.io/4.1.3/socket.io.min.js"></script>
+  </head>
+
+  <body>
+	<div id="sign_in">
+	  <h1> Sign in </h1>
+
+	  <div id="account" class="input">
+		Account:
+		<input placeholder="Account"/>
+	  </div>
+
+	  <div id="password" class="input">
+		Password:
+		<input type="password" placeholder="Password"/>
+	  </div>
+
+	  <button id="submit">Submit</button>
+	</div>
+	<div id="main" style="display: none;">
+	  <div id="sidebar">
+		<div id="myname" class="username"></div>
+		<div id="friend-box"></div>
+	  </div>
+	  <div id="chat">
+		<div id="room">相亲相爱一家人</div>
+		<div id="contents">
+
+		  <div class="content other-content">
+			<label class="name">LX2</label>
+			<div class="text">点击左侧进入房间吧！</div>
+		  </div>
+
+		</div>
+		<div id="reply">
+		  <div id="tools-bar">
+			<button>表情</button>
+			<button>截图</button>
+			<button>文件</button>
+		  </div>
+		  <div class="textarea" contenteditable="true"></div>
+		  <button id="sent_message">发送</button>
+		</div>
+	  </div>
+	</div>
+
+  </body>
+  <style>
+html {
+  min-height: 100%;
+}
+	body {
+	  justify-content: center;
+	  background-color: lightgray;
+	}
+	.disappear {
+	  animation: disappearAnimation 1s forwards;
+	}
+	@keyframes disappearAnimation {
+	  from {
+		opacity: 1;
+		top: 150px;
+	  }
+	  to {
+		opacity: 0;
+		top: -300px;
+	  }
+	}
+	#sign_in {
+	  width: 400px;
+	  height: 300px;
+	  text-align: center;
+	  background-color: white;
+	  border: 1px solid gray;
+	  position: absolute;
+	  top: 150px;
+	  left: calc(50% - 200px);
+	  z-index: 99;
+	}
+	h1{
+	  margin-bottom: 50px;
+	}
+	.input{
+	  margin-bottom: 30px;
+	}
+	input{
+	  padding: 5px;
+	}
+	#submit{
+	  color: white;
+	  background-color: #1677ff;
+	  font-size: 15px;
+	  padding: 5px;
+	  width: 270px;
+	}
+	#submit:hover{
+	  background-color: #005EFF;
+	}
+	#sidebar {
+	  background-color: #1677ff;
+	  width: 270px;
+	  display: flex;
+	  flex-direction: column;
+	}
+	#main {
+	  display: flex;
+	  height: 700px;
+	  width: 1200px;
+	  margin: 0 auto;
+	}
+
+	#room {
+	  padding: 20px;
+	  text-align: center;
+	  border-bottom: 1px solid gray;
+	}
+	#chat {
+	  width: calc(1200px - 270px);
+	  background: white;
+	  display: flex;
+	  flex-direction: column;
+	}
+	#contents {
+	  height: 100%;
+	  padding: 30px 30px 10px 30px;
+	  overflow: auto;
+	}
+	.content {
+	  display: flex;
+	  margin-bottom: 16px;
+	  align-items: baseline;
+	}
+	.my-content {
+	  justify-content: flex-end;
+	}
+	.other-content {
+	  justify-content: flex-start;
+	}
+	.text {
+	  font-size: 15px;
+	  padding: 10px;
+	  background-color: #1677ff;
+	  margin: 0 10px;
+	  color: white;
+	}
+	#reply {
+	  align-items: flex-end;
+	  padding: 0 25px 10px 25px;
+	  border-top: 1px solid black;
+	}
+	#tools-bar {
+	  width: 100%;
+	}
+	.textarea {
+	  min-height: 20px;
+	  max-height: 300px;
+	  outline: 0;
+	  border: 1px solid black;
+	  font-size: 16px;
+	  line-height: 24px;
+	  padding: 10px;
+	  word-wrap: break-word;
+	  overflow-x: hidden;
+	  overflow-y: auto;
+	}
+	button {
+	  margin: 5px;
+	}
+	#myname {
+	  cursor: auto;
+	  font-size: 20px;
+	}
+	.username {
+	  color: white;
+	  padding: 20px;
+	  font-size: 15px;
+	  cursor: pointer;
+	}
+	.selected {
+	  background-color: #005EFF;
+	}
+	#myname {
+	  font-weight: bold;
+	}
+  </style>
+  <script src="/js/user.js"></script>
+</html>
