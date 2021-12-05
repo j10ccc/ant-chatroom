@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "12-4",
   "version": "1.0.0",
   "description": "",
@@ -15,20 +14,3 @@
     "socket.io": "^4.4.0"
   }
 }
-=======
-  "name": "11-20",
-  "version": "0.0.0",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "serve": "vite preview"
-  },
-  "dependencies": {
-    "vue": "^3.2.16"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-vue": "^1.9.3",
-    "vite": "^2.6.4"
-  }
-}
->>>>>>> 627d11969d3e3e5660f45305fe204381790c45b3
